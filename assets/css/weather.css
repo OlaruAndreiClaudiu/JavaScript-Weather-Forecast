@@ -33,15 +33,6 @@ h1 {
     border-radius: 4px;
     border: 1px solid white;
 }
-.weather-input .separator {
-    height: 1px;
-    width: 100%;
-    margin: 25px 0;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .weather-input button {
     width: 100%;
     padding: 10px 0;
@@ -50,7 +41,7 @@ h1 {
     border: none;
     color: white;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 15px;
     background: blue;
 }
 .weather-input .location-btn {
@@ -59,10 +50,14 @@ h1 {
 .weather-data {
     width: 100%;
 }
+.details {
+    position: relative;
+    right: 1149px;
+}
 .current-weather {
     color: white;
     display: flex;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 20px 70px 20px 20px;
     background: blue;
     justify-content: space-between;
@@ -98,7 +93,7 @@ h1 {
     list-style: none;
     color: white;
     padding: 18px 16px;
-    border-radius: 5px;
+    border-radius: 15px;
     background: grey;
     width: calc(100% / 5);
 }
