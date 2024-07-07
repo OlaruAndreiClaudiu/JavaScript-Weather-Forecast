@@ -50,10 +50,6 @@ h1 {
 .weather-data {
     width: 100%;
 }
-.details {
-    position: relative;
-    right: 1149px;
-}
 .current-weather {
     color: white;
     display: flex;

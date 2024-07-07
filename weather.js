@@ -4,20 +4,23 @@ const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 const API_KEY = "529ad0c583c8dfa126a89147bc1cae3f";
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) {
         return `<div class="details">
                 <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
-                <img src="http://openweathermap.org/img/wn/${weatherItem.weather[0].icon}01d@2x.png" alt="weather-icon">
-                <h4>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)}℃</h4>
+                <h4>Temperature: ${(weatherItem.main.temp - 273.15).toFixed()}℃</h4>
                 <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
                 <h4>Humidity: ${weatherItem.main.humidity}%</h4>                 
-                </div>`;       
+                </div>
+                <div class="icon">                   
+                <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
+                </div>`        
     } else {
         return `<li class="card">
                 <h3>(${weatherItem.dt_txt.split(" ")[0]})</h3>
-                <img src="http://openweathermap.org/img/wn/${weatherItem.weather[0].icon}01d@4x.png" alt="weather-icon">
-                <h4>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}℃</h4>
+                <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
+                <h4>Temp: ${(weatherItem.main.temp - 273.15).toFixed()}℃</h4>
                 <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
                 <h4>Humidity: ${weatherItem.main.humidity}%</h4>  
                 </li>`;
