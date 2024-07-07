@@ -9,11 +9,17 @@ body {
     background: white;
 }
 h1 {
-    color: white;
+    color: transparent;
     padding: 18px 0;
     text-align: center;
     font-size: 1.75rem;
     background: blue;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 2.95rem;
 }
 .container {
     display: flex;
